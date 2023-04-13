@@ -272,7 +272,7 @@ def exceeds_cap_ratio(text: str, threshold: float = 0.5) -> bool:
         # IF text.isupper() is True, it should be Title, not narrative text.
         return True
 
-    tokens = word_tokenize(text)
+    tokens = [tk for tk in word_tokenize(text) if tk.isalpha()]
     if len(tokens) == 0:
         # If word_tokenize(text) is empty, return must be True to avoid being misclassified as Narrative Text.
         return True
