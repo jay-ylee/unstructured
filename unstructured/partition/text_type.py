@@ -92,7 +92,7 @@ def is_possible_narrative_text(
 def is_possible_title(
     text: str,
     sentence_min_length: int = 5,
-    title_max_word_length: int = 12,
+    title_max_word_length: int = 20,
     non_alpha_threshold: float = 0.5,
     language: str = "en",
     language_checks: bool = False,
